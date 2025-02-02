@@ -4,18 +4,18 @@
 
 ### macos / linux
 ```ini:~/.zshrc
-export DEV_CONFIG_ROOT="/Users/moon/JnJ-soft/Developments"
+export DEV_CONFIG_ROOT="/Users/moon/JnJ/Developments"
 ```
 
 ### windows
 > 시스템 환경 변수 편집
-DEV_CONFIG_ROOT="C:\Users\moon\JnJ-soft\Developments"
+DEV_CONFIG_ROOT="C:\JnJ\Developments"
 
 
 ## xcli 설치
 
 ```sh
-npm install -g jnu-base
+npm install -g jun-one
 ```
 
 1. 프로젝트 생성/설정
@@ -23,14 +23,14 @@ npm install -g jnu-base
 ## 프로젝트 생성
 
 ```sh
-# <syntax> xcli -e init -r "[REPO_NAME]||[USER_NAME]||[TEMPLATE_NAME]||[[DESCRIPTION]]"
+# <syntax> xcli -e init -r "[REPO_NAME]||[USER_NAME]||[TEMPLATE_NAME]||[DESCRIPTION]"
 xcli -e init -r "{{name}}||{{github-id}}||ts-swc-npm||{{description}}"
 ```
 
 ## npm 패키지 설치
 ```sh
-# jnu-base(dotenv yargs @octokit/rest 포함) + 프로젝트 의존 패키지
-npm install jnu-base  --save
+# jun-one(dotenv yargs @octokit/rest 포함) + 프로젝트 의존 패키지
+npm install jun-one  --save
 ```
 
 2. 프로젝트 개발

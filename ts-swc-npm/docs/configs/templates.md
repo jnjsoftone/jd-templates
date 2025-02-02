@@ -1,29 +1,29 @@
 1. node-utils
 
 ```
-/Users/moon/JnJ-soft/Developments/Templates/ts-swc-npm
+/Users/moon/JnJ/Developments/Templates/ts-swc-npm
 ```
 
 
 2. node-server
 ```
-/Users/moon/JnJ-soft/Developments/Templates/ts-swc-server
+/Users/moon/JnJ/Developments/Templates/ts-swc-server
 ```
 
 3. obsidian-plugin
 ```
-/Users/moon/JnJ-soft/Developments/Templates/obsidian-plugin
+/Users/moon/JnJ/Developments/Templates/obsidian-plugin
 ```
 
 
 3. python-utils
 
 ```
-/Users/moon/JnJ-soft/Developments/Templates/python-pipenv
+/Users/moon/JnJ/Developments/Templates/python-pipenv
 ```
 
 4. python-server
 
 ```
-/Users/moon/JnJ-soft/Developments/Templates/python-pipenv-uvicorn
+/Users/moon/JnJ/Developments/Templates/python-pipenv-uvicorn
 ```

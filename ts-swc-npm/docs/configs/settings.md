@@ -3,7 +3,7 @@
 - 계정 생성 및 비밀번호 변경시 일괄 처리
 
 ```ini:~/.zshrc
-export DEV_CONFIG_ROOT="/Users/moon/JnJ-soft/Development"
+export DEV_CONFIG_ROOT="/Users/moon/JnJ/Development"
 ```
 
 
@@ -13,7 +13,7 @@ export DEV_CONFIG_ROOT="/Users/moon/JnJ-soft/Development"
 ## Structure
 
 ```
-/Users/moon/JnJ-soft/Developments/_Settings
+/Users/moon/JnJ/Developments/_Settings
 
 
 ```
