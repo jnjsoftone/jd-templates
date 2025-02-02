@@ -1,0 +1,85 @@
+## Project Structure
+
+```
+.
+├── .env # environment variables
+├── .cursorrules # cursor rules
+├── LICENSE
+├── README.md # readme
+├── install.bat # windows install script
+├── install.sh # linux install script
+├── package.json # package.json
+├── publish.bat # windows publish script
+├── publish.sh # linux publish script
+├── _backups # backup files
+│   └── README.md
+├── _drafts # draft files
+│   └── README.md
+├── cjs # commonjs build
+│   ├── .swcrc
+│   └── package.json
+├── docs # documentations
+│   ├── client # documents for client(user)
+│   │   └── 사용자_매뉴얼.md
+│   ├── cursor # documents with cursor
+│   │   ├── history.md
+│   │   └── requirements.md
+│   ├── dev # reference for development team(기획,디자인,개발)
+│   │   ├── 00_README.md
+│   │   ├── 01_0_프로젝트 제안서.md
+│   │   ├── ...
+│   │   └── 17_사용자_매뉴얼.md
+│   └── reference # reference documents
+│       ├── github.md
+│       └── npmjs.md
+├── esm # es module build
+│   ├── .swcrc
+│   └── package.json
+├── src # typescript source code
+│   └── index.ts
+└── types # types for build
+    ├── index.d.ts
+    └── index.d.ts.map
+```
+
+## Technology Stack
+
+- language
+  - Node.js
+  - TypeScript
+- IDE
+  - Cursor.ai
+  - .vscode
+  - prettier
+- Package Manager
+  - npm
+  - yarn
+- Build Tool
+  - SWC
+- Basic Package
+  - dotenv
+  - axios
+  - concurrently
+  - chokidar
+
+## Code Guidelines
+
+### TypeScript Guidelines
+- Code AREA 표시
+  - Import AREA
+  - Types AREA (새로 추가)
+  - Functions AREA
+  - Export AREA
+- type에 `any` 사용 가능
+- arrow function 사용
+- 함수 개별적으로 export 하지 않고, 파일 하단에 모아서, `export { fun1, fun2, fun3, ... }`
+- index.ts 가 있는 경우, 폴더 내의 다른 함수들은 모두 index.ts 에서 export
+
+### Naming Conventions
+  - Use camelCase for functions and variables
+  - Use UPPER_CASE for constants
+  - Use kebab-case for file names
+
+### Documentation
+- Add JSDoc comments for functions
+- Add usage examples in comments
