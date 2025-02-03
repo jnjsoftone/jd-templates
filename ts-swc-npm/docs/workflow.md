@@ -4,18 +4,18 @@
 
 ### macos / linux
 ```ini:~/.zshrc
-export DEV_CONFIG_ROOT="/Users/moon/JnJ/Developments"
+export DEV_ROOT="/Users/moon/JnJ/Developments"
 ```
 
 ### windows
 > 시스템 환경 변수 편집
-DEV_CONFIG_ROOT="C:\JnJ\Developments"
+DEV_ROOT="C:\JnJ\Developments"
 
 
 ## xcli 설치
 
 ```sh
-npm install -g jun-one
+npm install -g jnu-abc
 ```
 
 1. 프로젝트 생성/설정
@@ -29,8 +29,8 @@ xcli -e init -r "{{name}}||{{github-id}}||ts-swc-npm||{{description}}"
 
 ## npm 패키지 설치
 ```sh
-# jun-one(dotenv yargs @octokit/rest 포함) + 프로젝트 의존 패키지
-npm install jun-one  --save
+# jnu-abc(dotenv yargs @octokit/rest 포함) + 프로젝트 의존 패키지
+npm install jnu-abc  --save
 ```
 
 2. 프로젝트 개발
@@ -51,19 +51,17 @@ npm install jun-one  --save
 - cursor.ai > 설정 > NOTEPADS > '+ Create New Notepad'
 
 
-3. 버전 관리
+3. publish
 
-## macos / linux
 ```sh
+# npm login
+npm login {{github-id}}
+
 cd {{current-dir}}/{{project-name}}
+
+# macos / linux
 ./publish.sh
-```
 
-## windows
-
-```sh
-cd {{current-dir}}/{{project-name}}
+# windows
 ./publish.bat
 ```
-
-

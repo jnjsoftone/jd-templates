@@ -13,6 +13,9 @@ cd {{current-dir}}
 
 # <syntax> xcli -e init -r "[REPO_NAME]||[USER_NAME]||[TEMPLATE_NAME]||[DESCRIPTION]"
 xcli -e init -r "{{name}}||{{github-id}}||ts-swc-npm||{{description}}"
+
+# package install
+npm install 
 ```
 ## functions
 
@@ -26,12 +29,13 @@ xcli -e init -r "{{name}}||{{github-id}}||ts-swc-npm||{{description}}"
 
 ## publish
 
-### windows
 ```sh
-./publish.bat
-```
+# npm login
+npm login {{github-id}}
 
-### macos
-```sh
-./publish.sh patch|minor|major
+# windows
+./publish.bat
+
+# macos
+./publish.sh
 ```
