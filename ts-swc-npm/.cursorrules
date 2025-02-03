@@ -3,17 +3,24 @@
 ```
 .
 ├── .env # environment variables
+├── .env.win # environment variables for windows
+├── .env.mac # environment variables for mac
 ├── .cursorrules # cursor rules
+├── .jest.e2e.js  # jest e2e rules
+├── .jest.integration.js # jest integration rules
+├── .jest.unit.js # jest unit rules
+├── .prettierrc # prettier rules
 ├── LICENSE
 ├── README.md # readme
-├── install.bat # windows install script
-├── install.sh # linux install script
 ├── package.json # package.json
 ├── publish.bat # windows publish script
 ├── publish.sh # linux publish script
+├── tsconfig.json # tsconfig.json
 ├── _backups # backup files
 │   └── README.md
 ├── _drafts # draft files
+│   └── README.md
+├── _playground # playground files
 │   └── README.md
 ├── cjs # commonjs build
 │   ├── .swcrc
@@ -37,6 +44,9 @@
 │   └── package.json
 ├── src # typescript source code
 │   └── index.ts
+├── tests # typescript source code
+│   ├── unit
+│   └── utils
 └── types # types for build
     ├── index.d.ts
     └── index.d.ts.map
@@ -67,13 +77,13 @@
 ### TypeScript Guidelines
 - Code AREA 표시
   - Import AREA
-  - Types AREA (새로 추가)
   - Functions AREA
   - Export AREA
 - type에 `any` 사용 가능
 - arrow function 사용
 - 함수 개별적으로 export 하지 않고, 파일 하단에 모아서, `export { fun1, fun2, fun3, ... }`
 - index.ts 가 있는 경우, 폴더 내의 다른 함수들은 모두 index.ts 에서 export
+- type 파일은 모두 `src/types.ts` 파일에 일괄 저장
 
 ### Naming Conventions
   - Use camelCase for functions and variables
