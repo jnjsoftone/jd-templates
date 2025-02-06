@@ -24,7 +24,7 @@ npm install -g jnu-abc
 
 ```sh
 # <syntax> xcli -e init -r "[REPO_NAME]||[USER_NAME]||[TEMPLATE_NAME]||[DESCRIPTION]"
-xcli -e init -r "{{name}}||{{github-id}}||ts-webpack-obsidianPlugin||{{description}}"
+xcli -e init -r "{{name}}||{{github-id}}||ts-webpack-chromeExtension||{{description}}"
 ```
 
 ## npm 패키지 설치

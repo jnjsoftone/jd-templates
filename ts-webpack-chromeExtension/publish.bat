@@ -2,11 +2,11 @@
 REM [syntax] publish [patch|minor|major] [-m "commit message"]
 REM default: patch, "chore: build for publish"
 
-set PLUGIN_DIR="{{OBSIDIAN_VAULT_ROOT}}\.obsidian\plugins\{{name}}"
-@REM ex) set PLUGIN_DIR=D:\Notes\Obsidian\liveSync\dev\.obsidian\plugins\jop-web
+set EXTENSION_DIR="{{EXTENSION_ROOT}}\{{name}}"
+@REM set EXTENSION_DIR=C:\JnJ\Developments\jd-chromeExtensions\jce-clipper
 
 :: 플러그인 디렉토리가 없으면 생성
-if not exist "%PLUGIN_DIR%" mkdir "%PLUGIN_DIR%"
+if not exist "%EXTENSION_DIR%" mkdir "%EXTENSION_DIR%"
 
 SET mode=patch
 SET commit_msg=chore: build for publish
@@ -65,9 +65,9 @@ REM 6. git push
 git push --follow-tags
 if errorlevel 1 goto :error
 
-REM :: 7. obsidian 플러그인 배포
-del /Q "%PLUGIN_DIR%\*"
-xcopy /E /Y "dist\*" "%PLUGIN_DIR%\"
+REM 7. chrome extension 배포
+del /Q "%EXTENSION_DIR%\*"
+xcopy /E /Y "dist\*" "%EXTENSION_DIR%\"
 
 goto :success
 

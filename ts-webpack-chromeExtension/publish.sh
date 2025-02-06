@@ -2,13 +2,8 @@
 # [syntax] ./publish.sh patch|minor|major
 # default: patch
 
-PLUGIN_DIR="{{OBSIDIAN_VAULT_ROOT}}/.obsidian/plugins/{{name}}"
-# ex) PLUGIN_DIR="/Users/moon/JnJ-soft/Obsidian/liveSync/dev/.obsidian/plugins/jop-web"
-
-# 플러그인 디렉토리가 없으면 생성
-if [ ! -d "$PLUGIN_DIR" ]; then
-  mkdir -p "$PLUGIN_DIR"
-fi
+EXTENSION_DIR="{{EXTENSION_ROOT}}/{{name}}"
+# EXTENSION_DIR="/Users/moon/JnJ-soft/Developments/jd-chromeExtensions/jce-clipper"
 
 mode="patch"
 commit_msg="chore: build for publish"
@@ -50,4 +45,4 @@ git commit -m "chore: release version $version" && \
 # 6. git push
 git push --follow-tags && \
 # 7. obsidian 플러그인 배포
-cp -R dist/* "$PLUGIN_DIR/"
+cp -R dist/* "$EXTENSION_DIR/"
