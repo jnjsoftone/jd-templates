@@ -1,6 +1,6 @@
 #!/bin/bash
-# [syntax] ./publish.sh patch|minor|major
-# default: patch
+# [syntax] ./publish.sh [patch|minor|major] [-m "commit message"]
+# default: patch, "chore: build for publish"
 
 EXTENSION_DIR="{{EXTENSION_ROOT}}/{{name}}"
 # EXTENSION_DIR="/Users/moon/JnJ-soft/Developments/jd-chromeExtensions/jce-clipper"
@@ -29,20 +29,21 @@ done
 git pull && \
 # 2. 빌드
 npm run build && \
+# 5. 변경사항 커밋
+git add . && \
+git commit -m "$commit_msg" && \
+# 6. git push
+git push --follow-tags && \
 # 3. npm 버전 업데이트 (이때 자동으로 버전 태그가 생성됨)
 npm version $mode && \
 # 4. package.json의 버전을 manifest.json에 적용
 version=$(node -p "require('./package.json').version") && \
 node -e "
   const fs = require('fs');
-  const manifest = require('./public/manifest.json');
+  const manifest = require('./dist/manifest.json');
   manifest.version = '$version';
-  fs.writeFileSync('./public/manifest.json', JSON.stringify(manifest, null, 2) + '\n');
+  fs.writeFileSync('./dist/manifest.json', JSON.stringify(manifest, null, 2) + '\n');
 " && \
-# 5. 변경사항 커밋
-git add . && \
-git commit -m "chore: release version $version" && \
-# 6. git push
-git push --follow-tags && \
-# 7. obsidian 플러그인 배포
+
+# 7. chrome extension 배포
 cp -R dist/* "$EXTENSION_DIR/"
