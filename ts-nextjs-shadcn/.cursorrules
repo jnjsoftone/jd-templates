@@ -28,7 +28,7 @@
 - 모든 UI 컴포넌트는 ShadCN을 사용해야 합니다.
 - 컴포넌트 사용 전 설치 여부를 확인해야 합니다: `components/ui` 디렉토리 체크
 - 컴포넌트 설치 명령어를 사용해야 합니다: `npx shadcn@latest add [component-name]`
-  - ⚠️ 주의: `npx shadcn-ui@latest add` 명령어는 deprecated. 반드시 `shadcn@latest add` 사용해야 합니다.
+  - ⚠️ 주의: `npx shadcn-ui@latest add` 명령어는 deprecated. 반드시 `npx shadcn@latest add` 사용해야 합니다.
 - ShadCN 컴포넌트의 스타일 수정은 `tailwind.config.ts`의 `theme` 설정을 통해 해야 합니다.
 
 ### Styling
@@ -65,8 +65,6 @@
 - Next.js의 서버 컴포넌트를 기본으로 사용하고, 클라이언트 컴포넌트가 필요한 경우에만 'use client' 지시어를 사용합니다.
 - 이미지는 Next.js의 Image 컴포넌트를 사용해야 합니다.
 - API 통신은 `/app/api` 디렉토리에 라우트 핸들러를 정의하여 처리합니다.
-
-
 
 
 ## Performance
